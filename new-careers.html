@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Scas Spaces" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link href="css/tiny-slider.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="images/logos/scas-black.png" type="image/png" />
+    <title>Scas Spaces</title>
+  </head>
+
+  <body>
+    <!-- Bootstrap Navbar (unchanged from original) -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container d-flex align-items-center">
+        <!-- Logo on the left -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="images/logos/scas-white.png" alt="Logo" style="height: 50px; max-width: 100%; object-fit: contain;" />
+        </a>
+
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link font-archi" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-archi" href="new-about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-archi" href="new-services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-archi" href="new-projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-archi active" href="new-careers.html">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-archi" href="new-contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Custom Carousel Structure -->
+    <div class="custom-carousel">
+      <!-- Carousel slides -->
+      <div class="carousel-slide active">
+        <img src="images/hero/1.jpg" alt="Slide 1" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/2.jpeg" alt="Slide 2" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/3.jpg" alt="Slide 3" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/4.jpg" alt="Slide 4" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/5.jpg" alt="Slide 5" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/6.jpg" alt="Slide 6" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/6.jpeg" alt="Slide 7" />
+      </div>
+
+      <!-- Fixed overlay that stays constant -->
+      <div class="fixed-overlay"></div>
+
+      <!-- Text overlays -->
+      <div class="text-container">
+        <div class="text-overlay active">
+          <div class="carousel-heading">We Transform Spaces</div>
+        </div>
+        <div class="text-overlay">
+          <div class="carousel-heading">90-day Transformations</div>
+        </div>
+        <div class="text-overlay">
+          <div class="carousel-heading">Exceptional Fit-Out Quality At Competitive Rates Delivered With Precision</div>
+        </div>
+        <div class="text-overlay">
+          <div class="carousel-heading">Workplaces That Inspire Fun & Boost Productivity</div>
+        </div>
+        <div class="text-overlay">
+          <div class="carousel-heading">Resilient & Reliable Connectivity Infrastructure</div>
+        </div>
+        <div class="text-overlay">
+          <div class="carousel-heading">Stellar Facilities Management Services</div>
+        </div>
+        <div class="text-overlay">
+          <div class="carousel-heading">Variety of Locations Across the Country</div>
+        </div>
+      </div>
+
+      <!-- New Page Indicator Box -->
+      <div class="page-indicator">
+        Careers
+      </div>
+    </div>
+
+    <style>
+      /* Existing styles remain unchanged */
+      .navbar {
+        z-index: 1000;
+        padding: 1rem 1rem;
+        background: #b86748;
+        /* border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px; */
+      }
+
+      .navbar-nav .nav-link {
+        color: rgba(255, 255, 255, 0.5) !important;
+        font-weight: 500;
+        font-size: 1.05rem;
+        margin-left: 15px;
+        margin-right: 15px;
+        position: relative;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        line-height: 40px;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      /* Active link indicator */
+      .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0px; /* Move the line down a bit */
+        /* Center the line by using left: 50% and transform */
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        width: 80%; /* Make the line shorter than the text */
+        height: 3.5px;
+        background-color: white;
+        border-radius: 2px;
+        transition: transform 0.3s ease;
+      }
+
+      .navbar-nav .nav-link.active::after,
+      .navbar-nav .nav-link:hover::after {
+        transform: translateX(-50%) scaleX(1); /* Keep the translateX when showing the line */
+      }
+
+      .navbar-nav .nav-link.active,
+      .navbar-nav .nav-link:hover {
+        color: #ffffff !important;
+      }
+
+      .navbar-nav {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      .custom-carousel {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .carousel-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .carousel-slide.active {
+        opacity: 1;
+        z-index: 1;
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .fixed-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 2;
+      }
+
+      .text-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+      }
+
+      .text-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        padding: 20px;
+      }
+
+      .text-overlay.active {
+        opacity: 1;
+      }
+
+      .carousel-heading {
+        font-size: 60px;
+        font-family: "Archi";
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        font-weight: bold;
+        line-height: 1.4;
+        color: white;
+        text-align: center;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      /* New Page Indicator Styles */
+      .page-indicator {
+        position: absolute;
+        bottom: 0;
+        left: 27%;
+        transform: translateX(-50%);
+        background-color: #b86748;
+        color: white;
+        padding: 15px 30px;
+        font-family: "Archi";
+        font-size: 1.2rem;
+        font-weight: 500;
+        z-index: 3;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        /* text-transform: uppercase; */
+        letter-spacing: 1px;
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".carousel-slide");
+        const texts = document.querySelectorAll(".text-overlay");
+        let currentIndex = 0;
+        let intervalId;
+        let lastTime = Date.now();
+
+        function showNextSlide() {
+          slides[currentIndex].classList.remove("active");
+          texts[currentIndex].classList.remove("active");
+          currentIndex = (currentIndex + 1) % slides.length;
+          slides[currentIndex].classList.add("active");
+          texts[currentIndex].classList.add("active");
+        }
+
+        function startCarousel() {
+          if (intervalId) {
+            clearInterval(intervalId);
+          }
+          intervalId = setInterval(showNextSlide, 4000);
+        }
+
+        document.addEventListener("visibilitychange", function () {
+          if (document.hidden) {
+            lastTime = Date.now();
+          } else {
+            const timePassed = Date.now() - lastTime;
+            if (timePassed >= 4000) {
+              const slidesToAdvance = Math.floor(timePassed / 4000);
+              for (let i = 0; i < slidesToAdvance; i++) {
+                showNextSlide();
+              }
+            }
+            startCarousel();
+          }
+        });
+
+        startCarousel();
+      });
+    </script>
+
+    <div class="career-application-section py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10 text-center mb-5">
+            <h1 class="section-title">Join Our Team</h1>
+            <p>Looking for a dynamic and rewarding career? At Scas Spaces, we value talent, creativity, and drive. Explore current opportunities and become part of a team that is shaping the future with innovative ideas and solutions.</p>
+          </div>
+
+          <div class="col-lg-8">
+            <!-- <h2 class="text-center mb-4 font-archi">Job Application Form</h2> -->
+            <form id="jobApplicationForm" class="needs-validation" novalidate>
+              <!-- Personal Information -->
+              <div class="mb-4">
+                <h5 class="font-archi mb-3">Personal Information</h5>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="firstName" class="form-label">First Name *</label>
+                    <input type="text" class="form-control" id="firstName" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label">Last Name *</label>
+                    <input type="text" class="form-control" id="lastName" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email Address *</label>
+                    <input type="email" class="form-control" id="email" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone Number *</label>
+                    <input type="tel" class="form-control" id="phone" required />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Professional Information -->
+              <div class="mb-4">
+                <h5 class="font-archi mb-3">Professional Information</h5>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label for="currentPosition" class="form-label">Current Position</label>
+                    <input type="text" class="form-control" id="currentPosition" />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="experience" class="form-label">Years of Experience *</label>
+                    <input type="number" class="form-control" id="experience" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="noticePeriod" class="form-label">Notice Period (in days)</label>
+                    <input type="number" class="form-control" id="noticePeriod" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Resume Upload -->
+              <div class="mb-4">
+                <h5 class="font-archi mb-3">Resume Upload</h5>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label for="resumeUpload" class="form-label">Upload Resume (PDF only) *</label>
+                    <div class="custom-file-input">
+                      <input type="file" class="form-control" id="resumeUpload" accept=".pdf" required />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="coverLetter" class="form-label">Cover Letter</label>
+                    <textarea class="form-control" id="coverLetter" rows="4"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Additional Information -->
+              <div class="mb-4">
+                <h5 class="font-archi mb-3">Additional Information</h5>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label for="linkedinProfile" class="form-label">LinkedIn Profile URL</label>
+                    <input type="url" class="form-control" id="linkedinProfile" />
+                  </div>
+                  <div class="col-12">
+                    <label for="portfolio" class="form-label">Portfolio Website (if applicable)</label>
+                    <input type="url" class="form-control" id="portfolio" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="text-center" style="margin-top: 40px;">
+                <button type="submit" class="btn btn-primary py-2">Submit Application</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .career-application-section {
+        background-color: #f8f9fa;
+        min-height: 100vh;
+      }
+
+      /* .btn-primary {
+        background-color: #b86748;
+        border-color: #b86748;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #9c5439;
+        border-color: #9c5439;
+      } */
+
+      .form-label {
+        font-weight: 500;
+        color: #495057;
+      }
+
+      /* .form-control:focus {
+        border-color: #b86748;
+        box-shadow: 0 0 0 0.2rem rgba(184, 103, 72, 0.25);
+      } */
+
+      .form-control {
+        border-radius: 10px;
+      }
+
+      /* Custom file input styling */
+      .custom-file-input {
+        position: relative;
+      }
+
+      .custom-file-input .form-control {
+        height: 38px;
+        padding: 6px 12px;
+        cursor: pointer;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .career-application-section {
+          padding-top: 80px;
+        }
+      }
+    </style>
+
+    <script>
+      // Form validation
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("jobApplicationForm");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          if (!form.checkValidity()) {
+            event.stopPropagation();
+            form.classList.add("was-validated");
+            return;
+          }
+
+          // Here you would typically collect the form data and send it to your server
+          const formData = new FormData(form);
+
+          // Show success message (replace with your actual submission logic)
+          alert("Application submitted successfully!");
+          form.reset();
+          form.classList.remove("was-validated");
+        });
+
+        // File size validation
+        const resumeUpload = document.getElementById("resumeUpload");
+        resumeUpload.addEventListener("change", function (event) {
+          const file = event.target.files[0];
+          const maxSize = 5 * 1024 * 1024; // 5MB
+
+          if (file && file.size > maxSize) {
+            alert("File size must be less than 5MB");
+            event.target.value = "";
+            return;
+          }
+
+          // Validate file type
+          const fileType = file.type;
+          if (fileType !== "application/pdf") {
+            alert("Please upload PDF files only");
+            event.target.value = "";
+          }
+        });
+      });
+    </script>
+
+    <style>
+      .scas-footer {
+        background-color: #ffffff;
+        padding: 25px 0;
+        width: 100%;
+      }
+
+      .scas-footer__container {
+        width: 100%;
+        padding: 0 20px;
+      }
+
+      .scas-footer__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+
+      .scas-footer__motto {
+        color: #000000;
+        font-size: 24px;
+        width: 33.33%;
+      }
+
+      .scas-footer__social-section {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 33.33%;
+        text-align: center;
+      }
+
+      .scas-footer__logo-section {
+        width: 33.33%;
+        text-align: right;
+      }
+
+      .scas-footer__social-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 7px;
+      }
+
+      .scas-footer__social-item {
+        margin: 2px;
+        display: inline-block;
+      }
+
+      .scas-footer__social-link {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        display: inline-block;
+        background: #d7d2cb;
+        color: #212322;
+        border-radius: 50%;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      .scas-footer__social-link:hover {
+        background: #b86748;
+        color: #ffffff;
+      }
+
+      .scas-footer__logo {
+        max-width: 120px;
+        height: auto;
+      }
+
+      @media (max-width: 768px) {
+        .scas-footer__row {
+          flex-direction: column;
+          gap: 20px;
+          text-align: center;
+        }
+
+        .scas-footer__motto,
+        .scas-footer__social-section,
+        .scas-footer__logo-section {
+          width: 100%;
+          position: static;
+          transform: none;
+          text-align: center;
+        }
+      }
+    </style>
+
+    <footer class="scas-footer">
+      <div class="scas-footer__container">
+        <div class="scas-footer__row">
+          <div class="scas-footer__motto font-archi">
+            Creating Spaces. Crafting Dreams.
+          </div>
+
+          <div class="scas-footer__social-section">
+            <ul class="scas-footer__social-list">
+              <li class="scas-footer__social-item">
+                <a href="https://m.facebook.com/61555671272387" target="_blank" rel="noopener noreferrer" class="scas-footer__social-link">
+                  <span class="fa fa-brands fa-facebook-f"></span>
+                </a>
+              </li>
+              <li class="scas-footer__social-item">
+                <a href="https://www.instagram.com/archi_brands/" target="_blank" rel="noopener noreferrer" class="scas-footer__social-link">
+                  <span class="fa fa-brands fa-instagram"></span>
+                </a>
+              </li>
+              <li class="scas-footer__social-item">
+                <a href="https://www.linkedin.com/company/archi-brands/?originalSubdomain=eg" target="_blank" rel="noopener noreferrer" class="scas-footer__social-link">
+                  <span class="fa fa-brands fa-linkedin"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="scas-footer__logo-section">
+            <img src="images/logos/scas-black.png" alt="Scas Spaces Logo" class="scas-footer__logo" style="height: 50px; max-width: 100%; object-fit: contain;" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/disable.js"></script>
+  </body>
+</html>
